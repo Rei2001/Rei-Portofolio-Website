@@ -3,14 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Muhammad Rayhan</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #333; }
-    </style>
+    <title>Portfolio | Nama Kamu</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Halo, saya Muhammad Rayhan</h1>
-    <p>Fresh Graduate Teknik Komputer | Front-End Developer Enthusiast</p>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="p-6 flex justify-between items-center max-w-4xl mx-auto">
+        <h1 class="text-xl font-bold">Muhammad Rayhan</h1>
+        <div class="space-x-4">
+            <a href="#" class="hover:text-blue-600">Home</a>
+            <a href="#projects" class="hover:text-blue-600">Projects</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-4xl mx-auto py-20 px-6 text-center">
+        <h2 class="text-5xl font-extrabold mb-4">Front-End Developer</h2>
+        <p class="text-xl text-gray-600 mb-8">Lulusan Teknik Komputer yang antusias membangun antarmuka web yang interaktif dan user-friendly.</p>
+        <a href="mailto:emailkamu@email.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Hubungi Saya</a>
+    </header>
+
+    <!-- Tech Stack Section -->
+    <section class="max-w-4xl mx-auto py-10 px-6">
+        <h3 class="text-2xl font-bold mb-6">Tech Stack</h3>
+        <div class="flex flex-wrap gap-4">
+            <span class="bg-white border px-4 py-2 rounded-full shadow-sm">HTML5</span>
+            <span class="bg-white border px-4 py-2 rounded-full shadow-sm">CSS3</span>
+            <span class="bg-white border px-4 py-2 rounded-full shadow-sm">JavaScript</span>
+            <span class="bg-white border px-4 py-2 rounded-full shadow-sm">Tailwind CSS</span>
+            <span class="bg-white border px-4 py-2 rounded-full shadow-sm">Git</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-4xl mx-auto py-10 px-6">
+        <h3 class="text-2xl font-bold mb-6">Proyek Saya</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Project Card 1 -->
+            <div class="bg-white p-6 rounded-xl border shadow-sm">
+                <h4 class="text-lg font-semibold mb-2">Coming Soon...</h4>
+                <p class="text-gray-600 mb-4">Proyek pertama sedang dalam proses pengembangan.</p>
+                <a href="#" class="text-blue-600 font-medium">Lihat di GitHub →</a>
+            </div>
+            <!-- Project Card 2 -->
+            <div class="bg-white p-6 rounded-xl border shadow-sm">
+                <h4 class="text-lg font-semibold mb-2">Coming Soon...</h4>
+                <p class="text-gray-600 mb-4">Proyek kedua akan segera hadir.</p>
+                <a href="#" class="text-blue-600 font-medium">Lihat di GitHub →</a>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
