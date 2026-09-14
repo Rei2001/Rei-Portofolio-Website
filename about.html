@@ -1,89 +1,168 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Muhammad Rayhan</title>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-[#faf9f6] text-gray-900 selection:bg-black selection:text-white antialiased">
 
-    <!-- Navbar -->
-    <nav class="p-6 flex justify-between items-center max-w-4xl mx-auto">
-        <h1 class="text-xl font-bold">Muhammad Rayhan</h1>
-        <div class="space-x-6 text-sm font-medium">
-            <a href="index.html" class="hover:text-blue-600">Home</a>
-            <a href="index.html#projects" class="hover:text-blue-600">Projects</a>
-            <a href="about.html" class="text-blue-600 font-semibold">About</a>
+    <!-- Navbar dengan efek Sticky & Blur -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#faf9f6]/80 border-b border-gray-200/60 px-6 py-4 transition-all">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <h1 class="text-base font-bold tracking-tight hover:opacity-75 transition">
+                <a href="index.html">Muhammad Rayhan<span class="text-blue-600">.</span></a>
+            </h1>
+            <div class="space-x-8 text-sm font-medium">
+                <a href="index.html" class="text-gray-500 hover:text-black transition">Home</a>
+                <a href="projects.html" class="text-gray-500 hover:text-black transition">Projects</a>
+                <a href="about.html" class="text-black border-b-2 border-black pb-1">About</a>
+            </div>
         </div>
     </nav>
 
-    <!-- About Section -->
-    <main class="max-w-4xl mx-auto py-12 px-6">
-        <h2 class="text-3xl font-extrabold mb-6">Tentang Saya</h2>
-        
-        <!-- Summary Card -->
-        <div class="bg-white p-8 rounded-2xl border shadow-sm mb-8">
-            <div class="shrink-0">
+    <!-- About Header -->
+    <header class="max-w-4xl mx-auto py-16 px-6 animate-slide-up">
+        <div class="inline-block mb-3 px-3 py-1 bg-gray-200/70 rounded-full text-xs font-semibold text-gray-700 tracking-wide uppercase">
+            Background &amp; Profile
+        </div>
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">About Me.</h2>
+        <p class="text-gray-600 text-base max-w-xl">Mengenal lebih dekat latar belakang pendidikan, perjalanan karier profesional, dan keahlian teknis yang saya miliki.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="max-w-4xl mx-auto pb-16 px-6 animate-fade-in">
+        <div class="grid md:grid-cols-3 gap-8 items-start">
+            
+            <!-- Kolom Kiri: Foto Profil & Info Kontak -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm text-center md:text-left">
                 <img src="WhatsApp Image 2026-01-02 at 9.22.32 AM.jpeg" alt="Muhammad Rayhan" 
-                     class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-100 shadow-md">
-            </div>
-
-            <h3 class="text-xl font-bold mb-3 text-blue-600">Profil Profesional</h3>
-            <p class="text-gray-700 leading-relaxed mb-4">
-                Lulusan Teknik Komputer dari Universitas Brawijaya dengan pengalaman magang hands-on sebagai <strong>Front End Developer</strong> di PT Piranti Alfabet Perkasa dan <strong>IT Staff</strong> di PT Hutama Karya. Memiliki keahlian dalam pengembangan web menggunakan JavaScript, React.js, Next.js, serta integrasi sistem dan machine learning.
-            </p>
-        </div>
-
-        <!-- Experience & Education Grid -->
-        <div class="grid md:grid-cols-2 gap-8 mb-8">
-            <!-- Pendidikan -->
-            <div class="bg-white p-6 rounded-2xl border shadow-sm">
-                <h3 class="text-lg font-bold mb-4 text-gray-800">Pendidikan</h3>
-                <div class="border-l-2 border-blue-600 pl-4 space-y-2">
-                    <h4 class="font-semibold">Universitas Brawijaya</h4>
-                    <p class="text-sm text-gray-600">Sarjana Teknik Komputer (S.1) • IPK 3.12 / 4.00</p>
-                    <p class="text-xs text-gray-500">2019 - 2026 (Fokus: Software, Embedded Systems, & Machine Learning)</p>
-                </div>
-            </div>
-
-            <!-- Pengalaman Kerja -->
-            <div class="bg-white p-6 rounded-2xl border shadow-sm">
-                <h3 class="text-lg font-bold mb-4 text-gray-800">Pengalaman Kerja</h3>
-                <div class="space-y-4">
-                    <div class="border-l-2 border-blue-600 pl-4">
-                        <h4 class="font-semibold text-sm">Front End Developer Intern</h4>
-                        <p class="text-xs text-gray-600">PT Piranti Alfabet Perkasa (Jan 2023 - Mar 2023)</p>
-                        <p class="text-xs text-gray-500 mt-1">Membangun website perusahaan dari nol menggunakan React.js & Next.js.</p>
+                     class="w-32 h-32 md:w-full md:h-64 object-cover rounded-xl mx-auto mb-6 shadow-sm">
+                
+                <h3 class="text-xl font-bold tracking-tight mb-1">Muhammad Rayhan</h3>
+                <p class="text-xs text-gray-500 mb-4">Computer Engineering Graduate</p>
+                
+                <div class="space-y-3 text-xs text-gray-600 border-t border-gray-100 pt-4 text-left">
+                    <div>
+                        <span class="font-bold text-black uppercase tracking-wider block mb-0.5">Asal</span>
+                        Bekasi, Indonesia
                     </div>
-                    <div class="border-l-2 border-gray-400 pl-4">
-                        <h4 class="font-semibold text-sm">IT Staff Intern</h4>
-                        <p class="text-xs text-gray-600">PT Hutama Karya (Jun 2022 - Agu 2022)</p>
-                        <p class="text-xs text-gray-500 mt-1">Maintenance server, monitoring jaringan, dan membuat mobile helpdesk app.</p>
-                    </div>  
+                    <div>
+                        <span class="font-bold text-black uppercase tracking-wider block mb-0.5">Pendidikan</span>
+                        Universitas Brawijaya
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-gray-100">
+                    <a href="https://drive.google.com/file/d/1l9xAbD24vbPPvA-5rNYZGPw_Ir-OrtN_/view?usp=sharing" target="_blank" 
+                       class="block w-full bg-black text-white py-2.5 rounded-xl text-xs font-semibold hover:bg-gray-800 transition text-center">
+                       Download CV Lengkap
+                    </a>
                 </div>
             </div>
-        </div>
 
-        <!-- Tech Skills -->
-        <div class="bg-white p-8 rounded-2xl border shadow-sm">
-            <h3 class="text-xl font-bold mb-4 text-blue-600">Keahlian & Teknologi</h3>
-            <div class="flex flex-wrap gap-2">
-                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
-                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">React.js</span>
-                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Next.js</span>
-                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
-                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Python & C++</span>
-                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">HTML & CSS / Tailwind</span>
-                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Git & GitHub</span>
+            <!-- Kolom Kanan: Pengalaman & Riwayat -->
+            <div class="md:col-span-2 space-y-8">
+                
+                <!-- Summary Card -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-200/80 shadow-sm">
+                    <h3 class="text-lg font-bold mb-4 tracking-tight">Ringkasan Profesional</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Lulusan Teknik Komputer Universitas Brawijaya tahun 2026 yang memiliki ketertarikan mendalam pada pengembangan antarmuka web (Front-End Development) serta infrastruktur sistem. 
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Berpengalaman melalui berbagai penugasan teknis profesional dan proyek mandiri, berfokus pada penulisan kode yang bersih, efisien, serta pengalaman pengguna yang optimal.
+                    </p>
+                </div>
+
+                <!-- Experience Card -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-200/80 shadow-sm">
+                    <h3 class="text-lg font-bold mb-6 tracking-tight">Pengalaman Kerja</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-2 border-black pl-4 py-0.5">
+                            <span class="text-xs text-gray-400 font-semibold block mb-1">Professional Experience</span>
+                            <h4 class="font-bold text-gray-900 text-sm">Front End Developer</h4>
+                            <p class="text-xs text-gray-500 font-medium mb-2">PT Piranti Alfabet Perkasa</p>
+                            <p class="text-xs text-gray-600 leading-relaxed">Merancang dan mengembangkan komponen antarmuka web yang responsif serta berfokus pada optimalisasi fungsionalitas klien.</p>
+                        </div>
+
+                        <div class="border-l-2 border-gray-300 pl-4 py-0.5">
+                            <span class="text-xs text-gray-400 font-semibold block mb-1">Professional Experience</span>
+                            <h4 class="font-bold text-gray-900 text-sm">IT Staff</h4>
+                            <p class="text-xs text-gray-500 font-medium mb-2">PT Hutama Karya</p>
+                            <p class="text-xs text-gray-600 leading-relaxed">Menangani operasional sistem IT, pemeliharaan infrastruktur jaringan, serta dukungan teknis operasional harian.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Card -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-200/80 shadow-sm">
+                    <h3 class="text-lg font-bold mb-6 tracking-tight">Keahlian &amp; Teknologi</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-3 py-1.5 rounded-full">HTML5 / CSS3</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-full">Tailwind CSS</span>
+                        <span class="bg-amber-50 text-amber-700 text-xs font-semibold px-3 py-1.5 rounded-full">JavaScript</span>
+                        <span class="bg-rose-50 text-rose-700 text-xs font-semibold px-3 py-1.5 rounded-full">Java (Spring Boot)</span>
+                        <span class="bg-purple-50 text-purple-700 text-xs font-semibold px-3 py-1.5 rounded-full">Git &amp; GitHub</span>
+                        <span class="bg-emerald-50 text-emerald-700 text-xs font-semibold px-3 py-1.5 rounded-full">System Troubleshooting</span>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer class="max-w-4xl mx-auto py-10 px-6 border-t mt-10 text-center text-gray-400 text-sm">
-        © 2026 Muhammad Rayhan. Built with passion.
+    <!-- Footer Section -->
+    <footer class="max-w-4xl mx-auto py-16 px-6 border-t border-gray-200/60 mt-10">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <h3 class="text-lg font-bold mb-1 tracking-tight">Mari Terhubung</h3>
+                <p class="text-gray-500 text-sm">Terbuka untuk kesempatan diskusi atau peluang karier.</p>
+            </div>
+        
+            <div class="flex flex-wrap gap-3">
+                <a href="https://github.com/Rei2001" target="_blank" 
+                   class="bg-gray-100 text-gray-800 px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-black hover:text-white transition">
+                   GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/muhammad-rayhan-5bb62b144/" target="_blank" 
+                   class="bg-gray-100 text-gray-800 px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-black hover:text-white transition">
+                   LinkedIn
+                </a>
+                <a href="https://drive.google.com/file/d/1l9xAbD24vbPPvA-5rNYZGPw_Ir-OrtN_/view?usp=sharing" target="_blank" 
+                   class="bg-black text-white px-5 py-2.5 rounded-full text-xs font-semibold hover:bg-gray-800 transition">
+                   Download CV
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-gray-400 text-xs">
+            © 2026 Muhammad Rayhan. Designed with precision.
+        </div>
     </footer>
 </body>
 </html>
