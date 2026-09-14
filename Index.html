@@ -12,191 +12,65 @@
     <!-- Navbar -->
     <nav class="p-6 flex justify-between items-center max-w-4xl mx-auto">
         <h1 class="text-xl font-bold">Muhammad Rayhan</h1>
-        <div class="space-x-4">
-            <a href="#" class="hover:text-blue-600">Home</a>
-            <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <div class="space-x-6 text-sm font-medium">
+            <a href="index.html" class="text-blue-600 font-semibold">Home</a>
+            <a href="projects.html" class="hover:text-blue-600">Projects</a>
+            <a href="about.html" class="hover:text-blue-600">About</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="max-w-4xl mx-auto py-20 px-6 text-center">
+    <header class="max-w-4xl mx-auto py-24 px-6 text-center">
         <h2 class="text-5xl font-extrabold mb-4">Front-End Developer</h2>
-        <p class="text-xl text-gray-600 mb-8">Lulusan Teknik Komputer yang antusias membangun antarmuka web yang interaktif dan user-friendly.</p>
-        <div class="flex flex-col items-center gap-4">
-            <a href="mailto:itsrayhanmuhammad@gmail.com" 
-               class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-               Hubungi Saya
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Lulusan Teknik Komputer Universitas Brawijaya yang antusias membangun antarmuka web interaktif, responsif, dan berorientasi pada pengalaman pengguna.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="projects.html" 
+               class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition w-full sm:w-auto text-center">
+               Lihat Proyek Saya
             </a>
-            <p class="text-gray-500 text-sm">Atau salin email saya: <strong>itsrayhanmuhammad@gmail.com</strong></p>
+            <a href="about.html" 
+               class="bg-white text-gray-700 border border-gray-300 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition w-full sm:w-auto text-center">
+               Tentang Saya
+            </a>
         </div>
     </header>
 
-    <!-- Case Study Section -->
-    <section class="max-w-4xl mx-auto py-10 px-6 border-t mt-10">
-        <h3 class="text-2xl font-bold mb-6">Tentang Proyek-Proyek Ini</h3>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-            <!-- Case Study 1: Movie Finder -->
-            <div class="bg-white p-6 rounded-2xl border shadow-sm flex flex-col justify-between">
-                <div>
-                    <h4 class="text-xl font-semibold mb-2">Movie Finder App</h4>
-                    <p class="text-gray-600 text-sm mb-4">
-                        Aplikasi pencari film <em>real-time</em> menggunakan OMDb API dengan fokus pada penanganan data eksternal dan UX.
-                    </p>
-
-                    <div class="mb-4">
-                        <span class="font-bold text-blue-600 text-sm">Tantangan:</span>
-                        <p class="text-xs text-gray-600">Mengelola respons API yang tidak konsisten dan menangani poster film yang kosong (N/A).</p>
-                    </div>
-                    <div>
-                        <span class="font-bold text-green-600 text-sm">Solusi:</span>
-                        <p class="text-xs text-gray-600">Menggunakan <code>async/await</code> serta ternary operator untuk *fallback placeholder* gambar.</p>
-                    </div>
-                </div>
+    <!-- Quick Highlights Section -->
+    <section class="max-w-4xl mx-auto py-12 px-6 border-t">
+        <h3 class="text-2xl font-bold mb-6 text-center">Fokus & Keahlian Utama</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl border shadow-sm text-center">
+                <div class="text-blue-600 font-bold text-lg mb-2">Front-End Dev</div>
+                <p class="text-sm text-gray-600">Membangun antarmuka modern menggunakan JavaScript, React.js, Next.js, dan Tailwind CSS.</p>
             </div>
-
-            <!-- Case Study 2: To-Do List -->
-            <div class="bg-white p-6 rounded-2xl border shadow-sm flex flex-col justify-between">
-                <div>
-                    <h4 class="text-xl font-semibold mb-2">To-Do List & LocalStorage</h4>
-                    <p class="text-gray-600 text-sm mb-4">
-                        Aplikasi manajemen tugas harian yang mendemonstrasikan pemahaman tentang persistensi data di klien.
-                    </p>
-
-                    <div class="mb-4">
-                        <span class="font-bold text-blue-600 text-sm">Tantangan:</span>
-                        <p class="text-xs text-gray-600">Menjaga data tugas agar tidak hilang saat halaman browser ditutup atau di-<em>refresh</em>.</p>
-                    </div>
-                    <div>
-                        <span class="font-bold text-green-600 text-sm">Solusi:</span>
-                        <p class="text-xs text-gray-600">Memanfaatkan <code>localStorage</code> dengan konversi format JSON serta manipulasi array.</p>
-                    </div>
-                </div>
+            <div class="bg-white p-6 rounded-xl border shadow-sm text-center">
+                <div class="text-green-600 font-bold text-lg mb-2">System Engineering</div>
+                <p class="text-sm text-gray-600">Berpengalaman dalam pemeliharaan server, jaringan, dan pengembangan aplikasi mobile fungsional.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border shadow-sm text-center">
+                <div class="text-purple-600 font-bold text-lg mb-2">Problem Solving</div>
+                <p class="text-sm text-gray-600">Terbiasa menyelesaikan tantangan teknis melalui riset sistem dan integrasi API yang handal.</p>
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="max-w-4xl mx-auto py-10 px-6">
-        <h3 class="text-2xl font-bold mb-6">Proyek Pertama: Movie Finder</h3>
-        <div class="grid md:grid-cols-2 gap-6">
-            <!-- Project Card 1: Movie Finder -->
-            <div class="bg-white p-6 rounded-xl border shadow-sm">
-                <h3 class="text-xl font-bold mb-4">Cari Film Favorit</h3>
-                <div class="flex gap-2 mb-4">
-                    <input id="search" type="text" placeholder="Masukkan judul film..." class="border p-2 rounded w-full">
-                    <button onclick="cariFilm()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Cari</button>
-                </div>
-                <div id="status" class="text-center py-4 text-gray-500 italic hidden">Mencari film...</div>
-                <div id="results" class="grid grid-cols-2 gap-4"></div>         
-            </div>
-        </div>
-    </section>
-
-    <!-- To-Do List Section (Proyek Kedua) -->
-    <section class="max-w-4xl mx-auto py-10 px-6 mt-6 border-t">
-        <h3 class="text-2xl font-bold mb-6">Proyek Kedua: To-Do List</h3>
-        <div class="bg-white p-6 rounded-xl border shadow-sm max-w-xl">
-            <div class="flex gap-2 mb-4">
-                <input id="todo-input" type="text" placeholder="Tambah tugas baru..." class="border p-2 rounded w-full">
-                <button onclick="tambahTodo()" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Tambah</button>
-            </div>
-            <ul id="todo-list" class="space-y-2"></ul>
-        </div>
-    </section>
-
-    <!-- JavaScript Gabungan -->
-    <script>
-        // 1. Script Movie Finder
-        async function cariFilm() {
-            const query = document.getElementById('search').value;
-            const apiKey = '665fbed'; 
-            const resultsDiv = document.getElementById('results');
-            const status = document.getElementById('status');
-
-            if (!query) return;
-
-            status.classList.remove('hidden');
-            resultsDiv.innerHTML = '';
-
-            try {
-                const url = `https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`;
-                const res = await fetch(url);
-                const data = await res.json();
-
-                status.classList.add('hidden');
-
-                if(data.Search) {
-                    data.Search.forEach(movie => {
-                        resultsDiv.innerHTML += `
-                            <div class="bg-gray-50 p-2 rounded-lg border">
-                                <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/150'}" 
-                                     class="w-full h-48 object-cover rounded-md mb-2">
-                                <h4 class="font-bold text-gray-800 text-sm truncate">${movie.Title}</h4>
-                                <p class="text-xs text-gray-500">${movie.Year}</p>
-                            </div>
-                        `;
-                    });
-                } else {
-                    resultsDiv.innerHTML = '<p class="col-span-full text-center text-red-500">Film tidak ditemukan.</p>';
-                }
-            } catch (err) {
-                status.classList.add('hidden');
-                resultsDiv.innerHTML = '<p class="col-span-full text-center text-red-500">Terjadi kesalahan koneksi.</p>';
-            }
-        }
-
-        // 2. Script To-Do List
-        document.addEventListener('DOMContentLoaded', tampilkanTodos);
-
-        function tambahTodo() {
-            const input = document.getElementById('todo-input');
-            const todoText = input.value;
-            if (!todoText) return;
-
-            const todos = JSON.parse(localStorage.getItem('myTodos')) || [];
-            todos.push(todoText);
-            localStorage.setItem('myTodos', JSON.stringify(todos));
-            
-            input.value = '';
-            tampilkanTodos();
-        }
-
-        function hapusTodo(index) {
-            const todos = JSON.parse(localStorage.getItem('myTodos'));
-            todos.splice(index, 1);
-            localStorage.setItem('myTodos', JSON.stringify(todos));
-            tampilkanTodos();
-        }
-
-        function tampilkanTodos() {
-            const todoList = document.getElementById('todo-list');
-            const todos = JSON.parse(localStorage.getItem('myTodos')) || [];
-            
-            todoList.innerHTML = todos.map((todo, index) => `
-                <li class="flex justify-between items-center bg-gray-50 p-3 rounded border">
-                    <span>${todo}</span>
-                    <button onclick="hapusTodo(${index})" class="text-red-500 hover:text-red-700 text-sm font-semibold">Hapus</button>
-                </li>
-            `).join('');
-        }
-    </script>
 
     <!-- Footer Section -->
     <footer class="max-w-4xl mx-auto py-12 px-6 border-t mt-10">
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
             <div>
                 <h3 class="text-xl font-bold mb-2">Mari Terhubung</h3>
-                <p class="text-gray-600">Terbuka untuk kesempatan diskusi atau peluang karier.</p>
+                <p class="text-gray-600 text-sm">Terbuka untuk kesempatan diskusi atau peluang karier.</p>
             </div>
         
-            <div class="flex gap-4">
+            <div class="flex flex-wrap gap-4">
                 <a href="https://www.linkedin.com/in/muhammad-rayhan-5bb62b144/" target="_blank" 
-                   class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-900 transition">
+                   class="bg-gray-800 text-white px-6 py-2 rounded-lg text-sm hover:bg-gray-900 transition">
                    LinkedIn
                 </a>
                 <a href="https://drive.google.com/file/d/1l9xAbD24vbPPvA-5rNYZGPw_Ir-OrtN_/view?usp=sharing" target="_blank" 
-                   class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                   class="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm hover:bg-blue-700 transition">
                    Download CV
                 </a>
             </div>
